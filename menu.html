@@ -1,76 +1,34 @@
+```html
 <!DOCTYPE html>
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech Store - Expert Menu</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header class="main-header">
-    <div class="container">
-        <nav class="navbar">
-            <div class="logo">
-                <i class="fas fa-microchip"></i> CYBER<span>TECH</span>
+    <!-- Тут має бути ваш Header, який ви кидали раніше -->
+
+    <section class="container">
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-badge">Top Seller</div>
+                <div class="product-image">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3 class="product-title">MacBook Pro M3</h3>
+                <p class="product-desc">Потужність для професіоналів у новому кольорі.</p>
+                <div class="price">45 999 ₴</div>
+                <button class="buy-btn">
+                    <i class="fas fa-shopping-cart"></i> У кошик
+                </button>
             </div>
-
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#" class="active">Головна</a></li>
-                <li class="dropdown">
-                    <a href="#">Каталог <i class="fas fa-chevron-down"></i></a>
-                    <ul class="dropdown-content">
-                        <li><a href="#"><i class="fas fa-laptop"></i> Ноутбуки</a></li>
-                        <li><a href="#"><i class="fas fa-mobile-alt"></i> Смартфони</a></li>
-                        <li><a href="#"><i class="fas fa-gamepad"></i> Геймінг</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Сервіс</a></li>
-                <li><a href="#">Контакти</a></li>
-            </ul>
-
-            <div class="nav-icons">
-                <div class="search-box">
-                    <input type="text" placeholder="Пошук...">
-                    <i class="fas fa-search"></i>
-                </div>
-                <div class="cart" id="cartIcon">
-                    <i class="fas fa-shopping-cart"></i>
-                    <span class="cart-count">0</span>
-                </div>
-                <div class="burger" id="burger">
-                    <i class="fas fa-bars"></i>
-                </div>
-            </div>
-        </nav>
-    </div>
-</header>
-
-<main class="container">
-    <h1 class="page-title">Каталог техніки</h1>
-    <div class="products-grid">
-        <div class="product-card">
-            <div class="product-image">💻</div>
-            <h3>Ігровий ноутбук Pro</h3>
-            <p class="price">45 000 ₴</p>
-            <button class="buy-btn">Купити</button>
         </div>
-        <div class="product-card">
-            <div class="product-image">🖥️</div>
-            <h3>Монітор 4K UltraWide</h3>
-            <p class="price">18 500 ₴</p>
-            <button class="buy-btn">Купити</button>
-        </div>
-        <div class="product-card">
-            <div class="product-image">📱</div>
-            <h3>Смартфон Ultra 5G</h3>
-            <p class="price">28 000 ₴</p>
-            <button class="buy-btn">Купити</button>
-        </div>
-        </div>
-</main>
+    </section>
 
-<script src="menu.js"></script>
 </body>
 </html>
+```
