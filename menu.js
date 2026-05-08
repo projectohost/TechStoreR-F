@@ -1,43 +1,34 @@
-// 1. Ефект зміни шапки при прокрутці
-window.addEventListener('scroll', function() {
-    const header = document.querySelector('.main-header');
-    if (window.scrollY > 50) {
-        header.style.padding = '10px 0';
-        header.style.background = 'rgba(10, 10, 12, 0.95)';
-    } else {
-        header.style.padding = '20px 0';
-        header.style.background = 'rgba(15, 23, 42, 0.9)';
-    }
+// Category filter toggle
+document.querySelectorAll('.cat-pill').forEach(pill => {
+    pill.addEventListener('click', () => {
+        document.querySelectorAll('.cat-pill').forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+    });
 });
 
-// 2. Логіка кошика
-let count = 0;
-const cartIcon = document.getElementById('cartIcon');
-const cartBadge = document.querySelector('.cart-count');
+// Wishlist toggle
+document.querySelectorAll('.card-wish').forEach(btn => {
+    btn.addEventListener('click', e => {
+        e.stopPropagation();
+        const icon = btn.querySelector('i');
+        icon.classList.toggle('far');
+        icon.classList.toggle('fas');
+        btn.style.color = icon.classList.contains('fas') ? '#ff3b7a' : '';
+        btn.style.borderColor = icon.classList.contains('fas') ? '#ff3b7a' : '';
+    });
+});
 
-// Додаємо плавність анімації
-if (cartIcon) {
-    cartIcon.style.transition = "transform 0.2s ease";
-
-    cartIcon.addEventListener('click', function() {
-        count++; 
-        cartBadge.textContent = count;
-        
-        // Анімація "підстрибування"
-        cartIcon.style.transform = 'scale(1.3)';
-        
+// Add to cart animation
+let cartCount = 3;
+document.querySelectorAll('.add-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        cartCount++;
+        document.querySelector('.cart-badge').textContent = cartCount;
+        btn.innerHTML = '<i class="fas fa-check"></i>';
+        btn.style.background = '#4aab6d';
         setTimeout(() => {
-            cartIcon.style.transform = 'scale(1)';
-        }, 150);
+            btn.innerHTML = '<i class="fas fa-plus"></i>';
+            btn.style.background = '';
+        }, 1200);
     });
-}
-
-// 3. Обробка пошуку
-const searchInput = document.querySelector('.search-box input');
-if (searchInput) {
-    searchInput.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') {
-            alert('Шукаємо: ' + searchInput.value);
-        }
-    });
-}
+});

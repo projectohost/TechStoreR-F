@@ -1,34 +1,301 @@
-```html
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="menu.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TechZone — Магазин техніки</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  
+  
+  
+  <link rel="stylesheet" href="./menu.css">
+
 </head>
 <body>
 
-    <!-- Тут має бути ваш Header, який ви кидали раніше -->
+<!-- ── HEADER ── -->
+<header>
+  <nav>
+    <a href="#" class="logo"><i class="fas fa-bolt"></i>Tech<span>Zone</span></a>
+    <ul class="nav-links">
+      <li><a href="#" class="active">Каталог</a></li>
+      <li><a href="#">Акції</a></li>
+      <li><a href="#">Бренди</a></li>
+      <li><a href="#">Порівняння</a></li>
+      <li><a href="#">Контакти</a></li>
+    </ul>
+    <div class="nav-actions">
+      <div class="nav-search">
+        <i class="fas fa-search" style="font-size:12px;flex-shrink:0"></i>
+        <input type="text" placeholder="Пошук..."/>
+      </div>
+      <button class="icon-btn"><i class="far fa-heart"></i></button>
+      <button class="icon-btn">
+        <i class="fas fa-shopping-bag"></i>
+        <span class="cart-badge">3</span>
+      </button>
+      <button class="icon-btn"><i class="far fa-user"></i></button>
+    </div>
+  </nav>
+</header>
 
-    <section class="container">
-        <div class="products-grid">
-            <div class="product-card">
-                <div class="product-badge">Top Seller</div>
-                <div class="product-image">
-                    <i class="fas fa-laptop-code"></i>
-                </div>
-                <h3 class="product-title">MacBook Pro M3</h3>
-                <p class="product-desc">Потужність для професіоналів у новому кольорі.</p>
-                <div class="price">45 999 ₴</div>
-                <button class="buy-btn">
-                    <i class="fas fa-shopping-cart"></i> У кошик
-                </button>
-            </div>
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-text">
+    <div class="hero-tag"><i class="fas fa-fire"></i> Хіт сезону</div>
+    <h1 class="hero-title">MacBook Pro<br/><em>M3 Max</em><br/>вже тут</h1>
+    <p class="hero-desc">Неймовірна продуктивність, революційний чіп Apple M3 Max і дисплей Liquid Retina XDR. Для тих, хто не зупиняється.</p>
+    <div class="hero-btns">
+      <button class="btn-primary"><i class="fas fa-shopping-cart"></i> Купити зараз</button>
+      <button class="btn-ghost"><i class="fas fa-play"></i> Дивитись огляд</button>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-glow"></div>
+    <img class="hero-img"
+      src="https://prod-cdn.prod.asbis.io/s3size/el:t/f:webp/rt:fill/w:900/plain/s3://cms/product/e0/c6/e0c6fb5d849055c91659c11b2a014907/260304170014740588.webp"
+      alt="MacBook Pro"
+      onerror="this.src='https://via.placeholder.com/420x280/111118/00e5ff?text=MacBook+Pro'"/>
+  </div>
+</section>
+
+<!-- ── CATEGORIES ── -->
+<section class="section" style="padding-top:0; padding-bottom:24px;">
+  <div class="cats">
+    <div class="cat-pill active"><i class="fas fa-th-large"></i> Всі товари</div>
+    <div class="cat-pill"><i class="fas fa-laptop"></i> Ноутбуки</div>
+    <div class="cat-pill"><i class="fas fa-mobile-alt"></i> Смартфони</div>
+    <div class="cat-pill"><i class="fas fa-headphones"></i> Аудіо</div>
+    <div class="cat-pill"><i class="fas fa-tablet-alt"></i> Планшети</div>
+    <div class="cat-pill"><i class="fas fa-gamepad"></i> Ігри</div>
+    <div class="cat-pill"><i class="fas fa-camera"></i> Камери</div>
+    <div class="cat-pill"><i class="fas fa-watch"></i> Смарт-годинники</div>
+    <div class="cat-pill"><i class="fas fa-tv"></i> Телевізори</div>
+  </div>
+</section>
+
+<!-- ── PRODUCTS ── -->
+<section class="section" style="padding-top:0;">
+  <div class="section-header">
+    <h2 class="section-title">Популярні товари</h2>
+    <a href="#" class="section-link">Всі товари &rarr;</a>
+  </div>
+  <div class="products-grid">
+
+    <!-- Card 1 -->
+    <div class="product-card">
+      <div class="card-img-wrap">
+        <span class="card-badge badge-hot">🔥 Хіт</span>
+        <button class="card-wish"><i class="far fa-heart"></i></button>
+        <img class="card-img"
+          src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-7inch-blacktitanium?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=1692845702708"
+          alt="iPhone 15 Pro"
+          onerror="this.src='https://via.placeholder.com/140x140/12121a/00e5ff?text=iPhone'"/>
+      </div>
+      <div class="card-body">
+        <div class="card-brand">Apple</div>
+        <div class="card-name">iPhone 15 Pro Max</div>
+        <div class="card-desc">Titanium. So strong. So light. So Pro.</div>
+        <div class="card-rating">
+          <span class="stars">★★★★★</span>
+          <span class="rating-val">4.9 (2.1k)</span>
         </div>
-    </section>
+        <div class="card-footer">
+          <div class="price-wrap">
+            <div class="price-old">58 999 ₴</div>
+            <div class="price-new">52 499 ₴</div>
+          </div>
+          <button class="add-btn"><i class="fas fa-plus"></i></button>
+        </div>
+      </div>
+    </div>
 
+    <!-- Card 2 -->
+    <div class="product-card">
+      <div class="card-img-wrap">
+        <span class="card-badge badge-new">New</span>
+        <button class="card-wish"><i class="far fa-heart"></i></button>
+        <img class="card-img"
+          src="https://original-shop.com.ua/image/cache/catalog/1airpods/mfhp4ze-a/znimokekrana2025-10-31o10.13.34-500x500.jpeg"
+          alt="AirPods Pro"
+          onerror="this.src='https://via.placeholder.com/140x140/12121a/00e5ff?text=AirPods'"/>
+      </div>
+      <div class="card-body">
+        <div class="card-brand">Apple</div>
+        <div class="card-name">AirPods Pro 2nd Gen</div>
+        <div class="card-desc">Adaptive Audio. Personalized Spatial Audio.</div>
+        <div class="card-rating">
+          <span class="stars">★★★★★</span>
+          <span class="rating-val">4.8 (5.4k)</span>
+        </div>
+        <div class="card-footer">
+          <div class="price-wrap">
+            <div class="price-new">9 499 ₴</div>
+          </div>
+          <button class="add-btn"><i class="fas fa-plus"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="product-card">
+      <div class="card-img-wrap">
+        <span class="card-badge badge-sale">−15%</span>
+        <button class="card-wish"><i class="far fa-heart"></i></button>
+        <img class="card-img"
+          src="https://y.ua/pimg/378x378/52/73/3240792.jpeg"
+          alt="Samsung S23 Ultra"
+          onerror="this.src='https://via.placeholder.com/140x140/12121a/00e5ff?text=Samsung'"/>
+      </div>
+      <div class="card-body">
+        <div class="card-brand">Samsung</div>
+        <div class="card-name">Galaxy S24 Ultra</div>
+        <div class="card-desc">Titanium frame, 200MP AI camera, S Pen.</div>
+        <div class="card-rating">
+          <span class="stars">★★★★☆</span>
+          <span class="rating-val">4.7 (3.2k)</span>
+        </div>
+        <div class="card-footer">
+          <div class="price-wrap">
+            <div class="price-old">54 999 ₴</div>
+            <div class="price-new">46 749 ₴</div>
+          </div>
+          <button class="add-btn"><i class="fas fa-plus"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="product-card">
+      <div class="card-img-wrap">
+        <button class="card-wish"><i class="far fa-heart"></i></button>
+        <img class="card-img"
+          src="https://content1.rozetka.com.ua/goods/images/big/609183489.jpg"
+          alt="iPad Pro"
+          onerror="this.src='https://via.placeholder.com/140x140/12121a/00e5ff?text=iPad'"/>
+      </div>
+      <div class="card-body">
+        <div class="card-brand">Apple</div>
+        <div class="card-name">iPad Pro M2 12.9"</div>
+        <div class="card-desc">Liquid Retina XDR, Apple M2, Thunderbolt.</div>
+        <div class="card-rating">
+          <span class="stars">★★★★★</span>
+          <span class="rating-val">4.9 (1.8k)</span>
+        </div>
+        <div class="card-footer">
+          <div class="price-wrap">
+            <div class="price-new">39 999 ₴</div>
+          </div>
+          <button class="add-btn"><i class="fas fa-plus"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="product-card">
+      <div class="card-img-wrap">
+        <span class="card-badge badge-hot">🔥 Хіт</span>
+        <button class="card-wish"><i class="far fa-heart"></i></button>
+        <img class="card-img"
+          src="https://images.unsplash.com/photo-1612198188060-c7c2a3b66eae?w=300&q=80"
+          alt="Sony WH-1000XM5"
+          onerror="this.src='https://via.placeholder.com/140x140/12121a/00e5ff?text=Sony'"/>
+      </div>
+      <div class="card-body">
+        <div class="card-brand">Sony</div>
+        <div class="card-name">WH-1000XM5</div>
+        <div class="card-desc">Industry-leading noise cancellation, 30h battery.</div>
+        <div class="card-rating">
+          <span class="stars">★★★★★</span>
+          <span class="rating-val">4.9 (7.3k)</span>
+        </div>
+        <div class="card-footer">
+          <div class="price-wrap">
+            <div class="price-old">14 999 ₴</div>
+            <div class="price-new">11 999 ₴</div>
+          </div>
+          <button class="add-btn"><i class="fas fa-plus"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="product-card">
+      <div class="card-img-wrap">
+        <span class="card-badge badge-new">New</span>
+        <button class="card-wish"><i class="far fa-heart"></i></button>
+        <img class="card-img"
+          src="https://dzvinok.ua/pub/media/catalog/product/cache/c687aa7517cf01e65c009f6943c2b1e9/a/p/apple_watch_ultra3_49_bk_ti_bk_tml_m-pru_mf1q4qpa_-foto1.webp"
+          alt="Apple Watch"
+          onerror="this.src='https://via.placeholder.com/140x140/12121a/00e5ff?text=Watch'"/>
+      </div>
+      <div class="card-body">
+        <div class="card-brand">Apple</div>
+        <div class="card-name">Watch Ultra 2</div>
+        <div class="card-desc">Titanium case, 60h battery, precision GPS.</div>
+        <div class="card-rating">
+          <span class="stars">★★★★★</span>
+          <span class="rating-val">4.8 (980)</span>
+        </div>
+        <div class="card-footer">
+          <div class="price-wrap">
+            <div class="price-new">32 999 ₴</div>
+          </div>
+          <button class="add-btn"><i class="fas fa-plus"></i></button>
+        </div>
+      </div>
+    </div>
+
+ 
+<!-- Card 7 -->
+    <div class="product-card">
+      <div class="card-img-wrap">
+        <span class="card-badge badge-new">New</span>
+        <button class="card-wish"><i class="far fa-heart"></i></button>
+        <img class="card-img"
+          src="https://blog.mta.ua/assets/images/cache/assets/images/2024/veresen/plejstejshn-5-pro/playstation-5-pro-data-vyihoda-900x510.jpg"
+          alt="PlayStation5"
+          onerror="this.src='https://via.placeholder.com/140x140/12121a/00e5ff?text=Watch'"/>
+      </div>
+      <div class="card-body">
+        <div class="card-brand">Sony</div>
+        <div class="card-name">PlayStation 5</div>
+        <div class="card-desc">Ultra HD 4K, AMD Ryzen Zen 2, Ray Tracing.</div>
+        <div class="card-rating">
+          <span class="stars">★★★★★</span>
+          <span class="rating-val">6.7 (67k)</span>
+        </div>
+        <div class="card-footer">
+          <div class="price-wrap">
+            <div class="price-new">67 000 ₴</div>
+          </div>
+          <button class="add-btn"><i class="fas fa-plus"></i></button>
+        </div>
+      </div>
+    </div>
+
+<!-- ── PROMO BANNER ── -->
+<div class="promo">
+  <div class="promo-inner">
+    <div class="promo-text">
+      <div class="promo-label">⚡ Обмежена пропозиція</div>
+      <div class="promo-title">MacBook Air M3 —<br/>від 32 999 ₴</div>
+      <div class="promo-sub">Найтонший MacBook. До -20% до 10 травня.</div>
+      <button class="btn-primary" style="margin-top:20px;"><i class="fas fa-arrow-right"></i> Переглянути</button>
+    </div>
+    <img class="promo-img"
+      src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-midnight-select-20220606?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1653084303665"
+      alt="MacBook Air"
+      onerror="this.style.display='none'"/>
+  </div>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  © 2026 <span>TechZone</span>. Всі права захищено. Зроблено з ❤️ в Україні.
+</footer>
+
+<script src="./menu.js"> </script>
 </body>
 </html>
-```
